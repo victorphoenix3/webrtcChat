@@ -1,0 +1,21 @@
+{
+  "name": "webrtc-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^16.5.1",
+    "budo": "^11.6.4",
+    "jsdom": "^16.3.0",
+    "nodemon": "^2.0.4",
+    "simple-peer": "^9.7.2",
+    "wrtc": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "budo index.js:bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jayati",
+  "license": "ISC"
+}
