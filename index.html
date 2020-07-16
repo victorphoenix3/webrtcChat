@@ -3,34 +3,33 @@
     <head>
         <meta charset = "utf-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <title>demo</title>
     </head>
     <body>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-5">
-                    <label for="yourid">Your Id:</label>
-                    <br>
-                    <textarea class="form-control" id="yourid" rows="3"></textarea>
-                    <button class="btn btn-success my-3" type="button" onclick="copyYourId()"> Copy</button>
-                    <br><br>
-                    <label for="clientid">Client Id:</label>
-                    <br>
-                    <textarea class="form-control" id="clientid" rows="3"></textarea>
-                    <button class="btn btn-success my-3" type="button" onclick="copyClientId()"> Copy</button>
-
-                    <br><br>
-                    <button id="connect" type="button" class="btn btn-primary">connect</button>
-                    <br><br>
-                    
-                    <label for="yourmsg">Enter Message</label>
-                    <br>
-                    <textarea class="form-control" id="yourmsg" rows="3"></textarea>
-                    <br>
-                    <button class="btn btn-secondary" id="send">Send</button>
-                    <pre id="msgs"></pre>
+        <div class="container mt-5">
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="mb-4">
+                        <label for="yourid">Your Id:</label>
+                        <textarea class="form-control" id="yourid" rows="3"></textarea>
+                        <button class=" btn btn-success my-3" type="button" style="font-size: 12px;" onclick="copyYourId()"> Copy <i class="fas fa-bars"></i></button>
+                    </div>
+                    <div class="mb-4">
+                        <label for="clientid">Client Id:</label>
+                        <textarea class="form-control" id="clientid" rows="3"></textarea>
+                    </div>
+                    <div>
+                        <button id="connect" type="button" class="btn btn-primary btn-block my-4">connect</button>
+                    </div>
+                    <div class="mt-4">
+                        <label for="yourmsg">Enter Message</label>
+                        <textarea class="form-control" id="yourmsg" rows="3"></textarea>
+                        <button class="btn btn-secondary my-3" id="send">Send</button>
+                        <pre id="msgs"></pre>
+                    </div>
                 </div>
-                <div class="col-7">
+                <div class="col-md-8">
                     <div id="livevideo"></div>
                 </div>
 
@@ -44,11 +43,6 @@
         <script>
             function copyYourId() {
              let textarea = document.getElementById("yourid");
-             textarea.select();
-             document.execCommand("copy");
-            }
-            function copyClientId() {
-             let textarea = document.getElementById("clientid");
              textarea.select();
              document.execCommand("copy");
             }
